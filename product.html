@@ -1,0 +1,1850 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="product.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#slider-range").slider({
+                range: true,
+                min: 0,
+                max: 500,
+                values: [75, 300],
+                slide: function (event, ui) {
+                    $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+                }
+            });
+            $("#amount").val("$" + $("#slider-range").sl0ider("values", 0) +
+                " - $" + $("#slider-range").slider("values", 1));
+        });
+    </script>
+</head>
+
+<body>
+    <!--topbar start-->
+    <section class="top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="offer-text-wrap">
+                        <ul class="text-center list-unstyled">
+
+                            <li class="grid-wrapper">
+                                <div class="richtext">
+                                    <p> </p>
+                                </div>
+                            </li>
+
+
+                            <li class="grid-wrapper center-block-box">
+                                <div class="richtext">
+                                    <p><strong>Free shipping</strong>&nbsp;orders from all item</p>
+                                </div>
+                            </li>
+
+                            <li class="grid-wrapper right-block-box">
+                                <div class="locali-block">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--topbar end-->
+    <!--header start-->
+    <section class="bg-white sticky-top">
+        <div class="container-custom border-bottom px-0 sticky-top bg-white">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container p-lg-0">
+                    <a class="navbar-brand me-auto navbar-brand d-block d-sm-inline-block  d-sm-0 ms-md-0444444"
+                        href="index.html">
+                        <img src="image/logo-1.svg" alt="" loading="lazy" class="img-fluid logo">
+                    </a>
+
+                    <ul class="shop-element order-md-2 list-unstyled d-flex align-items-center m-0 p-0">
+                        <a class="d-lg-none d-block top-icon" data-bs-toggle="offcanvas" href="#offcanvasExample"
+                            role="button" aria-controls="offcanvasExample">
+                            <i class="icon-menu"></i>
+                        </a>
+                        <div class="offcanvas offcanvas-start d-block d-lg-none" tabindex="-1" id="offcanvasExample"
+                            aria-labelledby="offcanvasExampleLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div>
+                                    Some text as placeholder. In real life you can have the elements you have chosen.
+                                    Like,
+                                    text, images, lists, etc.
+                                </div>
+                                <div class="dropdown mt-3">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                        data-bs-toggle="dropdown">
+                                        Dropdown button
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <li class="user-wrap">
+                            <div class="acc-desk d-flex align-item-center">
+                                <i class="icon-user align-item-center"></i>
+                                <div class="d-lg-block d-none">
+                                    <a href="/account" class="acc-ti" aria-label="Account">Account</a>
+                                    <div class="acc-re-lo">
+                                        <a href="/account/register" aria-label="Account">Register</a>
+                                        <a href="/account/login" aria-label="Account">Login</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <button class="d-lg-none d-md-none p-0 bg-transparent top-icon" type="button"
+                            data-bs-toggle="offcanvas" data-bs-target="#top-searchbar" aria-controls="offcanvasTop">
+                            <i class="icon-magnifier"></i>
+                        </button>
+
+                        <div class="offcanvas offcanvas-top d-lg-none d-block" tabindex="-1" id="top-searchbar"
+                            aria-labelledby="offcanvasTopLabel">
+                            <div class="offcanvas-header">
+                                <h2 class="offcanvas-title text-center" id="offcanvasTopLabel">What are you looking for?
+                                </h2>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <form class="form_search mx-auto d-lg-none d-md-none d-block">
+
+                                    <input type="search" class="form-control rounded-pill search-input"
+                                        placeholder="Search our store">
+
+                                    <button type="submit" class="search-btn">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+
+                                </form>
+                            </div>
+                        </div>
+                        <li class="wishlist-wrap ele-wrap">
+                            <div class="wishlist">
+                                <a class="header-wishlist-btn" href="#" title="Wishlist">
+                                    <i class="icon-heart"></i>
+
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="cart-wrap ele-wrap">
+                            <div class="shopping-widget">
+                                <div class="shopping-cart">
+                                    <a href="/cart" class="cart-count" id="ajax-cart-icon" aria-label="/cart"
+                                        role="button" aria-haspopup="dialog">
+                                        <i class="icon-handbag"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <form class=" form_search d-flex mx-auto d-lg-block d-md-block d-none">
+                        <input class="form-control me-2 rounded-pill" type="search" placeholder="Search our store"
+                            aria-label="Search">
+                        <button class="search-btn">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </section>
+    <!--header end-->
+    <!--nav start-->
+    <nav class="navbar navbar-expand-lg d-lg-block d-none sticky-top bg-white shadow-sm nav-offset">
+        <div class="container-custom">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class=" no-caret nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="true">
+                            Home
+                            <i class="ri-arrow-down-s-line"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown has-megamenu">
+                        <a class="no-caret nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Shop <i class="ri-arrow-down-s-line"></i>
+                        </a>
+                        <div class="dropdown-menu megamenu" role="menu">
+                            <div class="row g-4">
+                                <div class="col-lg-3 col-6">
+                                    <div class="col-megamenu">
+                                        <h6 class="title">Fresh food</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Fruit & nut</a></li>
+                                            <li><a href="#">Snack foods</a></li>
+                                            <li><a href="#">Organics nut gifts</a></li>
+                                            <li><a href="#">Non-dairy</a></li>
+                                            <li><a href="#">Blackberry organic</a></li>
+                                            <li><a href="#">Fresh & healthy food</a></li>
+                                        </ul>
+                                    </div> <!-- col-megamenu.// -->
+                                </div><!-- end col-3 -->
+                                <div class="col-lg-3 col-6">
+                                    <div class="col-megamenu">
+                                        <h6 class="title">Mixedfruits</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Oranges</a></li>
+                                            <li><a href="#">Ranch salad</a></li>
+                                            <li><a href="#">Fresh avocado</a></li>
+                                            <li><a href="#">Fresh blueberry</a></li>
+                                            <li><a href="#">Fresh apple (5kg)</a></li>
+                                            <li><a href="#">Fresh Grapes</a></li>
+                                        </ul>
+                                    </div> <!-- col-megamenu.// -->
+                                </div><!-- end col-3 -->
+                                <div class="col-lg-3 col-6">
+                                    <div class="col-megamenu">
+                                        <h6 class="title">Bananas & plantains</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Fresh gala</a></li>
+                                            <li><a href="#">Fifts mixed fruits</a></li>
+                                            <li><a href="#">Fresh organic</a></li>
+                                            <li><a href="#">Vegetable tomato</a></li>
+                                            <li><a href="#">Fresh litchi 100% organic</a></li>
+                                            <li><a href="#">Fresh blueberry</a></li>
+                                        </ul>
+                                    </div> <!-- col-megamenu.// -->
+                                </div>
+                                <div class="col-lg-3 col-6">
+                                    <div class="col-megamenu">
+                                        <h6 class="title">Apples berries</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Pears produce</a></li>
+                                            <li><a href="#">Fresh green orange</a></li>
+                                            <li><a href="#">Blackberry 100% organic</a></li>
+                                            <li><a href="#">Fresh grassben</a></li>
+                                            <li><a href="#">Deli roll cake</a></li>
+                                            <li><a href="#">Fresh grassben</a></li>
+                                        </ul>
+                                    </div> <!-- col-megamenu.// -->
+                                </div><!-- end col-3 -->
+                            </div><!-- end row -->
+                        </div> <!-- dropdown-mega-menu.// -->
+                    </li>
+                    <li class="nav-item dropdown has-megamenu">
+                        <a class="no-caret nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                            aria-expanded="true">
+                            Collection <i class="ri-arrow-down-s-line"></i>
+                        </a>
+                        <div class=" nav-img dropdown-menu custom-megamenu">
+                            <div class="row g-3">
+                                <div class="col-lg-4 col-6">
+                                    <div class="col-megamenu">
+                                        <a href="#">
+                                            <img src="image/nav-1.jpg" alt="">
+                                        </a>
+                                    </div> <!-- col-megamenu.// -->
+                                </div><!-- end col-3 -->
+                                <div class="col-lg-4 col-6">
+                                    <div class="col-megamenu">
+                                        <a href="#">
+                                            <img src="image/nav-2.jpg" alt="">
+                                        </a>
+                                    </div> <!-- col-megamenu.// -->
+                                </div><!-- end col-3 -->
+                                <div class="col-lg-4 col-6">
+                                    <div class="col-megamenu">
+                                        <a href="#">
+                                            <img src="image/nav-3.jpg" alt="">
+                                        </a>
+                                    </div> <!-- col-megamenu.// -->
+                                </div>
+                            </div><!-- end row -->
+                        </div> <!-- dropdown-mega-menu.// -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">Blogs</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class=" no-caret nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Pages
+                            <i class="ri-arrow-down-s-line"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item  position-relative">
+                        <a class="nav-link">Buy Vegist</a>
+                        <span class=" hot position-absolute top-0 start-100 translate-middle badge bg-danger rounded-0">
+                            Hot
+                            <span class="visually-hidden">unread messages</span>
+                        </span>
+                    </li>
+                </ul>
+                <div class="call-line">
+                    <a href="tel:0123 456 789" class="d-flex align-items-center gap-2">
+
+                        <!-- image first -->
+                        <div class="icon-block">
+                            <img src="image/headphone.png">
+                        </div>
+
+                        <!-- text second -->
+                        <div class="contact-block">
+                            <span class="fw-bold text-dark">Hotline:</span><br>
+                            <span>0123 456 789</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--nav end-->
+    <!--bredcrumb start-->
+    <div class="breadcrumb-area overlay-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+
+                    <ul class="breadcrumb-list list-unstyled">
+                        <li class="">
+                            <a href="#" title="Back to the home page">Home</a>
+                        </li>
+
+                        <li class="br-item">
+                            <span>Account</span>
+                        </li>
+
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--breadcrumb end -->
+    <section class="shop-page" style="padding: 80px 0 80px 0;">
+        <div class="container">
+            <div class="row">
+                <!--left side page start-->
+                <div class="col-4 custom-col d-lg-block d-none">
+                    <div class="shop-sidebar">
+                        <h6>Categories</h6>
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+
+                            <div class="accordion-body overflow-auto" style="max-height:270px;">
+
+                                <ul class="collection-listing list-unstyled space-free">
+
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="checkbox1">
+                                            <label class="form-check-label d-flex justify-content-between"
+                                                for="checkbox1">
+                                                Fashion
+                                                <span>(10)</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="checkbox1">
+                                            <label class="form-check-label d-flex justify-content-between"
+                                                for="checkbox1">
+                                                Fashion
+                                                <span>(10)</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="checkbox1">
+                                            <label class="form-check-label d-flex justify-content-between"
+                                                for="checkbox1">
+                                                Fashion
+                                                <span>(10)</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="checkbox1">
+                                            <label class="form-check-label d-flex justify-content-between"
+                                                for="checkbox1">
+                                                Fashion
+                                                <span>(10)</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="checkbox1">
+                                            <label class="form-check-label d-flex justify-content-between"
+                                                for="checkbox1">
+                                                Fashion
+                                                <span>(10)</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="checkbox1">
+                                            <label class="form-check-label d-flex justify-content-between"
+                                                for="checkbox1">
+                                                Fashion
+                                                <span>(10)</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="checkbox1">
+                                            <label class="form-check-label d-flex justify-content-between"
+                                                for="checkbox1">
+                                                Fashion
+                                                <span>(10)</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="checkbox1">
+                                            <label class="form-check-label d-flex justify-content-between"
+                                                for="checkbox1">
+                                                Fashion
+                                                <span>(10)</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="checkbox1">
+                                            <label class="form-check-label d-flex justify-content-between"
+                                                for="checkbox1">
+                                                Fashion
+                                                <span>(10)</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <!-- aur items -->
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="price-range shop-sidebar">
+                        <form class="row g-3 needs-validation" novalidate="">
+                            <label for="amount">Price range:</label>
+                            <input type="text" id="amount" readonly=""
+                                style="border:0; color:#f6931f; font-weight:bold;" class="form-control w-75">
+                        </form>
+                        <div id="slider-range"
+                            class="my-3 ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+                            <div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 15%; width: 45%;">
+                            </div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
+                                style="left: 15%;"></span><span tabindex="0"
+                                class="ui-slider-handle ui-corner-all ui-state-default" style="left: 60%;"></span>
+                        </div>
+                    </div>
+                    <div class="shop-sidebar">
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+
+                            <div class="accordion-body overflow-auto" style="max-height:270px;">
+
+                                <ul class="collection-listing list-unstyled space-free">
+
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="checkbox1">
+                                            <label class="form-check-label d-flex justify-content-between"
+                                                for="checkbox1">
+                                                Fashion
+                                                <span>(10)</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="checkbox1">
+                                            <label class="form-check-label d-flex justify-content-between"
+                                                for="checkbox1">
+                                                Fashion
+                                                <span>(10)</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="checkbox1">
+                                            <label class="form-check-label d-flex justify-content-between"
+                                                for="checkbox1">
+                                                Fashion
+                                                <span>(10)</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="checkbox1">
+                                            <label class="form-check-label d-flex justify-content-between"
+                                                for="checkbox1">
+                                                Fashion
+                                                <span>(10)</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="checkbox1">
+                                            <label class="form-check-label d-flex justify-content-between"
+                                                for="checkbox1">
+                                                Fashion
+                                                <span>(10)</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="checkbox1">
+                                            <label class="form-check-label d-flex justify-content-between"
+                                                for="checkbox1">
+                                                Fashion
+                                                <span>(10)</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="checkbox1">
+                                            <label class="form-check-label d-flex justify-content-between"
+                                                for="checkbox1">
+                                                Fashion
+                                                <span>(10)</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="checkbox1">
+                                            <label class="form-check-label d-flex justify-content-between"
+                                                for="checkbox1">
+                                                Fashion
+                                                <span>(10)</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="checkbox1">
+                                            <label class="form-check-label d-flex justify-content-between"
+                                                for="checkbox1">
+                                                Fashion
+                                                <span>(10)</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <!-- aur items -->
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="shop-sidebar">
+                        <div class="accordion-body overflow-auto">
+
+                            <ul class="collection-listing list-unstyled space-free">
+
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="checkbox1">
+                                        <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                                            Fashion
+                                            <span>(10)</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="checkbox1">
+                                        <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                                            Fashion
+                                            <span>(10)</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="checkbox1">
+                                        <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                                            Fashion
+                                            <span>(10)</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="checkbox1">
+                                        <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                                            Fashion
+                                            <span>(10)</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="checkbox1">
+                                        <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                                            Fashion
+                                            <span>(10)</span>
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="shop-sidebar">
+                        <h6 class="title">Brand</h6>
+                        <ul class="scrollbar d-flex justify-content-between list-unstyled">
+                            <li class="brand">
+                                1 Selected
+                            </li>
+                            <li class="brand">
+                                <a href="#">Reset</a>
+                            </li>
+                        </ul>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="checkbox1">
+                            <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                                Fashion
+                                <span>(10)</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="shop-sidebar">
+                        <h6 class="title">Product Type</h6>
+                        <ul class="scrollbar d-flex justify-content-between list-unstyled">
+                            <li class="brand">
+                                0 Selected
+                            </li>
+                            <li class="brand">
+                                <a href="#">Reset</a>
+                            </li>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="checkbox1">
+                                    <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                                        Fashion
+                                        <span>(10)</span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="checkbox1">
+                                    <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                                        Fashion
+                                        <span>(10)</span>
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class=" last-img">
+                        <h6 class="title">Availability</h6>
+                        <ul class="scrollbar d-flex justify-content-between list-unstyled">
+                            <li class="brand">
+                                0 Selected
+                            </li>
+                            <li class="brand">
+                                <a href="#">Reset</a>
+                            </li>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="checkbox1">
+                                    <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                                        Fashion
+                                        <span>(10)</span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="checkbox1">
+                                    <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                                        Fashion
+                                        <span>(10)</span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="image/side-banner.webp" alt="" class="img-fluid">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--left side page end-->
+
+                <div class="col-8 large-col product-grid">
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+
+                        <a class="btn d-lg-none d-md-none d-block" data-bs-toggle="offcanvas" href="#filterCanvas"
+                            role="button" aria-controls="offcanvasExample">
+                            <i class="ti ti-filter"></i>
+                            Filter
+                        </a>
+
+                        <div class="dropdown">
+                            <a class="btn dropdown-toggle no-caret" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Price, High to Low
+                                <i class="ri-arrow-down-s-line"></i>
+                            </a>
+
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="row g-4">
+                        <!-- Repeat this col for 4 cards -->
+                        <div class="col-6 col-md-6 col-lg-3">
+                            <div class="card border-0">
+                                <div class="card-img-container call border-none">
+                                    <a href="purchase.html">
+                                        <img src="image/card1.jpg" class="card-img-top lazy-load bg-light"
+                                            alt="Card Image">
+                                    </a>
+                                </div>
+                                <div class="card-body ps-1">
+                                    <h6><abbr title="Fresh organic juice">Fresh juice</abbr></h6>
+                                    <h6 class="price text-nowrap">$ 95.30 <del> $98.70 </del> </h6>
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <div class="rating text-nowrap">
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <span>(10)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="col-6 col-md-6 col-lg-3">
+                            <div class="card border-0">
+                                <div class="card-img-container call">
+                                    <a href="purchase.html">
+                                        <img src="image/card2.jpg" class="card-img-top img-fluid bg-light"
+                                            alt="Card Image">
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h6><abbr title="Fresh juicy grapes">Juicy Grapes</abbr></h6>
+                                    <h6 class="price text-nowrap">$ 95.30 <del> $98.70 </del>
+                                    </h6>
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <div class="rating text-nowrap">
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <span>(10)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="col-6 col-md-6 col-lg-3">
+                            <div class="card border-0">
+                                <div class="card-img-container call">
+                                    <a href="purchase.html">
+                                        <img src="image/card3.webp" class="card-img-top img-fluid bg-light"
+                                            alt="Card Image">
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h6><abbr title="Fresh organic orange">Fresh oranges</abbr></h6>
+                                    <h6 class="price">$ 95.30 <del> $98.70 </del>
+                                    </h6>
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <div class="rating text-nowrap">
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <span>(10)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="col-6 col-md-6 col-lg-3">
+                            <div class="card border-0">
+                                <div class="card-img-container call">
+                                    <a href="purchase.html">
+                                        <img src="image/card4.jpg" class="card-img-top img-fluid bg-light"
+                                            alt="Card Image">
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h6><abbr title="Fresh organic juice">Shrimp - jumbo</abbr></h6>
+                                    <h6 class="price">$ 95.30 <del> $98.70 </del></h6>
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <div class="rating text-nowrap">
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <span>(10)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-6 col-lg-3">
+                            <div class="card border-0">
+                                <div class="card-img-container call border-none">
+                                    <a href="purchase.html">
+                                        <img src="image/card1.jpg" class="card-img-top lazy-load bg-light"
+                                            alt="Card Image">
+                                    </a>
+                                </div>
+                                <div class="card-body ps-1">
+                                    <h6><abbr title="Fresh organic juice">Fresh juice</abbr></h6>
+                                    <h6 class="price text-nowrap">$ 95.30 <del> $98.70 </del> </h6>
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <div class="rating text-nowrap">
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <span>(10)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="col-6 col-md-6 col-lg-3">
+                            <div class="card border-0">
+                                <div class="card-img-container call">
+                                    <a href="purchase.html">
+                                        <img src="image/card2.jpg" class="card-img-top img-fluid bg-light"
+                                            alt="Card Image">
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h6><abbr title="Fresh juicy grapes">Juicy Grapes</abbr></h6>
+                                    <h6 class="price text-nowrap">$ 95.30 <del> $98.70 </del>
+                                    </h6>
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <div class="rating text-nowrap">
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <span>(10)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="col-6 col-md-6 col-lg-3">
+                            <div class="card border-0">
+                                <div class="card-img-container call">
+                                    <a href="purchase.html">
+                                        <img src="image/card3.webp" class="card-img-top img-fluid bg-light"
+                                            alt="Card Image">
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h6><abbr title="Fresh organic orange">Fresh oranges</abbr></h6>
+                                    <h6 class="price">$ 95.30 <del> $98.70 </del>
+                                    </h6>
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <div class="rating text-nowrap">
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <span>(10)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="col-6 col-md-6 col-lg-3">
+                            <div class="card border-0">
+                                <div class="card-img-container call">
+                                    <a href="purchase.html">
+                                        <img src="image/card4.jpg" class="card-img-top img-fluid bg-light"
+                                            alt="Card Image">
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h6><abbr title="Fresh organic juice">Shrimp - jumbo</abbr></h6>
+                                    <h6 class="price">$ 95.30 <del> $98.70 </del></h6>
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <div class="rating text-nowrap">
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <span>(10)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-6 col-lg-3">
+                            <div class="card border-0">
+                                <div class="card-img-container call border-none">
+                                    <a href="purchase.html">
+                                        <img src="image/card1.jpg" class="card-img-top lazy-load bg-light"
+                                            alt="Card Image">
+                                    </a>
+                                </div>
+                                <div class="card-body ps-1">
+                                    <h6><abbr title="Fresh organic juice">Fresh juice</abbr></h6>
+                                    <h6 class="price text-nowrap">$ 95.30 <del> $98.70 </del> </h6>
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <div class="rating text-nowrap">
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <span>(10)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="col-6 col-md-6 col-lg-3">
+                            <div class="card border-0">
+                                <div class="card-img-container call">
+                                    <a href="purchase.html">
+                                        <img src="image/card2.jpg" class="card-img-top img-fluid bg-light"
+                                            alt="Card Image">
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h6><abbr title="Fresh juicy grapes">Juicy Grapes</abbr></h6>
+                                    <h6 class="price text-nowrap">$ 95.30 <del> $98.70 </del>
+                                    </h6>
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <div class="rating text-nowrap">
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <span>(10)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="col-6 col-md-6 col-lg-3">
+                            <div class="card border-0">
+                                <div class="card-img-container call">
+                                    <a href="purchase.html">
+                                        <img src="image/card3.webp" class="card-img-top img-fluid bg-light"
+                                            alt="Card Image">
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h6><abbr title="Fresh organic orange">Fresh oranges</abbr></h6>
+                                    <h6 class="price">$ 95.30 <del> $98.70 </del>
+                                    </h6>
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <div class="rating text-nowrap">
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <span>(10)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="col-6 col-md-6 col-lg-3">
+                            <div class="card border-0">
+                                <div class="card-img-container call">
+                                    <a href="purchase.html">
+                                        <img src="image/card4.jpg" class="card-img-top img-fluid bg-light"
+                                            alt="Card Image">
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h6><abbr title="Fresh organic juice">Shrimp - jumbo</abbr></h6>
+                                    <h6 class="price">$ 95.30 <del> $98.70 </del></h6>
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <div class="rating text-nowrap">
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <span>(10)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-6 col-lg-3">
+                            <div class="card border-0">
+                                <div class="card-img-container call border-none">
+                                    <a href="purchase.html">
+                                        <img src="image/card1.jpg" class="card-img-top lazy-load bg-light"
+                                            alt="Card Image">
+                                    </a>
+                                </div>
+                                <div class="card-body ps-1">
+                                    <h6><abbr title="Fresh organic juice">Fresh juice</abbr></h6>
+                                    <h6 class="price text-nowrap">$ 95.30 <del> $98.70 </del> </h6>
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <div class="rating text-nowrap">
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <span>(10)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="col-6 col-md-6 col-lg-3">
+                            <div class="card border-0">
+                                <div class="card-img-container call">
+                                    <a href="purchase.html">
+                                        <img src="image/card2.jpg" class="card-img-top img-fluid bg-light"
+                                            alt="Card Image">
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h6><abbr title="Fresh juicy grapes">Juicy Grapes</abbr></h6>
+                                    <h6 class="price text-nowrap">$ 95.30 <del> $98.70 </del>
+                                    </h6>
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <div class="rating text-nowrap">
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <span>(10)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="col-6 col-md-6 col-lg-3">
+                            <div class="card border-0">
+                                <div class="card-img-container call">
+                                    <a href="purchase.html">
+                                        <img src="image/card3.webp" class="card-img-top img-fluid bg-light"
+                                            alt="Card Image">
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h6><abbr title="Fresh organic orange">Fresh oranges</abbr></h6>
+                                    <h6 class="price">$ 95.30 <del> $98.70 </del>
+                                    </h6>
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <div class="rating text-nowrap">
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <span>(10)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="col-6 col-md-6 col-lg-3">
+                            <div class="card border-0">
+                                <div class="card-img-container call">
+                                    <a href="purchase.html">
+                                        <img src="image/card4.jpg" class="card-img-top img-fluid bg-light"
+                                            alt="Card Image">
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h6><abbr title="Fresh organic juice">Shrimp - jumbo</abbr></h6>
+                                    <h6 class="price">$ 95.30 <del> $98.70 </del></h6>
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <div class="rating text-nowrap">
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <span>(10)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--footer start-->
+    <section class="footer-top-area">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="footer-list-wrap">
+                        <ul class="footer-list list-unstyled">
+                            <li class="ftlink-li footer-info">
+
+                                <div class="logo">
+                                    <a href="#" class="theme-footer-logo"><img src="image/logo-1.svg" alt="Vegist"
+                                            class="img-fluid ls-is-cached lazyloaded">
+                                    </a>
+
+                                    <p>Tortor neque egestas augue, eu vulputate magna eros eu erat.</p>
+                                </div>
+
+                                <div class="payment-img">
+                                    <a href="javascript:void(0)" class="payment-icon">
+
+
+                                        <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" role="img"
+                                            width="38" height="24" aria-labelledby="pi-visa">
+                                            <title id="pi-visa">Visa</title>
+                                            <path opacity=".07"
+                                                d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z">
+                                            </path>
+                                            <path fill="#fff"
+                                                d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32">
+                                            </path>
+                                            <path
+                                                d="M28.3 10.1H28c-.4 1-.7 1.5-1 3h1.9c-.3-1.5-.3-2.2-.6-3zm2.9 5.9h-1.7c-.1 0-.1 0-.2-.1l-.2-.9-.1-.2h-2.4c-.1 0-.2 0-.2.2l-.3.9c0 .1-.1.1-.1.1h-2.1l.2-.5L27 8.7c0-.5.3-.7.8-.7h1.5c.1 0 .2 0 .2.2l1.4 6.5c.1.4.2.7.2 1.1.1.1.1.1.1.2zm-13.4-.3l.4-1.8c.1 0 .2.1.2.1.7.3 1.4.5 2.1.4.2 0 .5-.1.7-.2.5-.2.5-.7.1-1.1-.2-.2-.5-.3-.8-.5-.4-.2-.8-.4-1.1-.7-1.2-1-.8-2.4-.1-3.1.6-.4.9-.8 1.7-.8 1.2 0 2.5 0 3.1.2h.1c-.1.6-.2 1.1-.4 1.7-.5-.2-1-.4-1.5-.4-.3 0-.6 0-.9.1-.2 0-.3.1-.4.2-.2.2-.2.5 0 .7l.5.4c.4.2.8.4 1.1.6.5.3 1 .8 1.1 1.4.2.9-.1 1.7-.9 2.3-.5.4-.7.6-1.4.6-1.4 0-2.5.1-3.4-.2-.1.2-.1.2-.2.1zm-3.5.3c.1-.7.1-.7.2-1 .5-2.2 1-4.5 1.4-6.7.1-.2.1-.3.3-.3H18c-.2 1.2-.4 2.1-.7 3.2-.3 1.5-.6 3-1 4.5 0 .2-.1.2-.3.2M5 8.2c0-.1.2-.2.3-.2h3.4c.5 0 .9.3 1 .8l.9 4.4c0 .1 0 .1.1.2 0-.1.1-.1.1-.1l2.1-5.1c-.1-.1 0-.2.1-.2h2.1c0 .1 0 .1-.1.2l-3.1 7.3c-.1.2-.1.3-.2.4-.1.1-.3 0-.5 0H9.7c-.1 0-.2 0-.2-.2L7.9 9.5c-.2-.2-.5-.5-.9-.6-.6-.3-1.7-.5-1.9-.5L5 8.2z"
+                                                fill="#142688"></path>
+                                        </svg>
+
+                                        <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38"
+                                            height="24" role="img" aria-labelledby="pi-paypal">
+                                            <title id="pi-paypal">PayPal</title>
+                                            <path opacity=".07"
+                                                d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z">
+                                            </path>
+                                            <path fill="#fff"
+                                                d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32">
+                                            </path>
+                                            <path fill="#003087"
+                                                d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z">
+                                            </path>
+                                            <path fill="#3086C8"
+                                                d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z">
+                                            </path>
+                                            <path fill="#012169"
+                                                d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z">
+                                            </path>
+                                        </svg>
+
+                                        <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" role="img"
+                                            width="38" height="24" aria-labelledby="pi-master">
+                                            <title id="pi-master">Mastercard</title>
+                                            <path opacity=".07"
+                                                d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z">
+                                            </path>
+                                            <path fill="#fff"
+                                                d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32">
+                                            </path>
+                                            <circle fill="#EB001B" cx="15" cy="12" r="7"></circle>
+                                            <circle fill="#F79E1B" cx="23" cy="12" r="7"></circle>
+                                            <path fill="#FF5F00"
+                                                d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z">
+                                            </path>
+                                        </svg>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 38 24"
+                                            width="38" height="24" aria-labelledby="pi-google_pay">
+                                            <title id="pi-google_pay">Google Pay</title>
+                                            <path
+                                                d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"
+                                                fill="#000" opacity=".07"></path>
+                                            <path
+                                                d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"
+                                                fill="#FFF"></path>
+                                            <path
+                                                d="M18.093 11.976v3.2h-1.018v-7.9h2.691a2.447 2.447 0 0 1 1.747.692 2.28 2.28 0 0 1 .11 3.224l-.11.116c-.47.447-1.098.69-1.747.674l-1.673-.006zm0-3.732v2.788h1.698c.377.012.741-.135 1.005-.404a1.391 1.391 0 0 0-1.005-2.354l-1.698-.03zm6.484 1.348c.65-.03 1.286.188 1.778.613.445.43.682 1.03.65 1.649v3.334h-.969v-.766h-.049a1.93 1.93 0 0 1-1.673.931 2.17 2.17 0 0 1-1.496-.533 1.667 1.667 0 0 1-.613-1.324 1.606 1.606 0 0 1 .613-1.336 2.746 2.746 0 0 1 1.698-.515c.517-.02 1.03.093 1.49.331v-.208a1.134 1.134 0 0 0-.417-.901 1.416 1.416 0 0 0-.98-.368 1.545 1.545 0 0 0-1.319.717l-.895-.564a2.488 2.488 0 0 1 2.182-1.06zM23.29 13.52a.79.79 0 0 0 .337.662c.223.176.5.269.785.263.429-.001.84-.17 1.146-.472.305-.286.478-.685.478-1.103a2.047 2.047 0 0 0-1.324-.374 1.716 1.716 0 0 0-1.03.294.883.883 0 0 0-.392.73zm9.286-3.75l-3.39 7.79h-1.048l1.281-2.728-2.224-5.062h1.103l1.612 3.885 1.569-3.885h1.097z"
+                                                fill="#5F6368"></path>
+                                            <path
+                                                d="M13.986 11.284c0-.308-.024-.616-.073-.92h-4.29v1.747h2.451a2.096 2.096 0 0 1-.9 1.373v1.134h1.464a4.433 4.433 0 0 0 1.348-3.334z"
+                                                fill="#4285F4"></path>
+                                            <path
+                                                d="M9.629 15.721a4.352 4.352 0 0 0 3.01-1.097l-1.466-1.14a2.752 2.752 0 0 1-4.094-1.44H5.577v1.17a4.53 4.53 0 0 0 4.052 2.507z"
+                                                fill="#34A853"></path>
+                                            <path
+                                                d="M7.079 12.05a2.709 2.709 0 0 1 0-1.735v-1.17H5.577a4.505 4.505 0 0 0 0 4.075l1.502-1.17z"
+                                                fill="#FBBC04"></path>
+                                            <path
+                                                d="M9.629 8.44a2.452 2.452 0 0 1 1.74.68l1.3-1.293a4.37 4.37 0 0 0-3.065-1.183 4.53 4.53 0 0 0-4.027 2.5l1.502 1.171a2.715 2.715 0 0 1 2.55-1.875z"
+                                                fill="#EA4335"></path>
+                                        </svg>
+
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" role="img"
+                                            aria-labelledby="pi-american_express" viewBox="0 0 38 24" width="38"
+                                            height="24">
+                                            <title id="pi-american_express">American Express</title>
+                                            <path fill="#000"
+                                                d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3Z"
+                                                opacity=".07"></path>
+                                            <path fill="#006FCF"
+                                                d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32Z">
+                                            </path>
+                                            <path fill="#FFF"
+                                                d="M22.012 19.936v-8.421L37 11.528v2.326l-1.732 1.852L37 17.573v2.375h-2.766l-1.47-1.622-1.46 1.628-9.292-.02Z">
+                                            </path>
+                                            <path fill="#006FCF"
+                                                d="M23.013 19.012v-6.57h5.572v1.513h-3.768v1.028h3.678v1.488h-3.678v1.01h3.768v1.531h-5.572Z">
+                                            </path>
+                                            <path fill="#006FCF"
+                                                d="m28.557 19.012 3.083-3.289-3.083-3.282h2.386l1.884 2.083 1.89-2.082H37v.051l-3.017 3.23L37 18.92v.093h-2.307l-1.917-2.103-1.898 2.104h-2.321Z">
+                                            </path>
+                                            <path fill="#FFF"
+                                                d="M22.71 4.04h3.614l1.269 2.881V4.04h4.46l.77 2.159.771-2.159H37v8.421H19l3.71-8.421Z">
+                                            </path>
+                                            <path fill="#006FCF"
+                                                d="m23.395 4.955-2.916 6.566h2l.55-1.315h2.98l.55 1.315h2.05l-2.904-6.566h-2.31Zm.25 3.777.875-2.09.873 2.09h-1.748Z">
+                                            </path>
+                                            <path fill="#006FCF"
+                                                d="M28.581 11.52V4.953l2.811.01L32.84 9l1.456-4.046H37v6.565l-1.74.016v-4.51l-1.644 4.494h-1.59L30.35 7.01v4.51h-1.768Z">
+                                            </path>
+                                        </svg>
+
+
+                                    </a>
+                                </div>
+                            </li>
+
+
+                            <li class="ftlink-li">
+                                <h2 class="ft-title d-none d-md-block">Services</h2>
+                                <a data-bs-toggle="collapse" href="#collapse-services"
+                                    class="ft-title d-flex justify-content-between align-items-center d-md-none">
+                                    <span>Services</span>
+                                    <i class="fa fa-angle-down"></i>
+                                </a>
+                                <!-- Collapse List -->
+                                <ul class="footer-sublist collapse d-md-block list-unstyled" id="collapse-services"
+                                    data-bs-parent="#ft-parent">
+
+                                    <li class="ftsublink-li">
+                                        <a href="/pages/about-us" class="ft-sublink">About vegist</a>
+                                    </li>
+
+                                    <li class="ftsublink-li">
+                                        <a href="/pages/faqs" class="ft-sublink">Faq's</a>
+                                    </li>
+
+                                    <li class="ftsublink-li">
+                                        <a href="/pages/contact-us" class="ft-sublink">Contact us</a>
+                                    </li>
+
+                                    <li class="ftsublink-li">
+                                        <a href="/blogs/news" class="ft-sublink">News</a>
+                                    </li>
+
+                                    <li class="ftsublink-li">
+                                        <a href="/pages/contact-us" class="ft-sublink">Store location</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+
+
+                            <li class="ftlink-li">
+
+                                <!-- Desktop Title -->
+                                <h2 class="ft-title d-none d-md-block">Privacy &amp; terms</h2>
+
+                                <!-- Mobile Clickable Title -->
+                                <a data-bs-toggle="collapse" href="#collapse-privacy-terms"
+                                    class="ft-title d-flex justify-content-between align-items-center d-md-none">
+                                    <span>Privacy &amp; terms</span>
+                                    <i class="fa fa-angle-down"></i>
+                                </a>
+
+                                <!-- Collapse List -->
+                                <ul class="footer-sublist collapse d-md-block list-unstyled" id="collapse-privacy-terms"
+                                    data-bs-parent="#ft-parent">
+
+                                    <li class="ftsublink-li">
+                                        <a href="/pages/payment-policy" class="ft-sublink">Payment policy</a>
+                                    </li>
+
+                                    <li class="ftsublink-li">
+                                        <a href="/pages/privacy-policy" class="ft-sublink">Privacy policy</a>
+                                    </li>
+
+                                    <li class="ftsublink-li">
+                                        <a href="/pages/return-policy" class="ft-sublink">Return policy</a>
+                                    </li>
+
+                                    <li class="ftsublink-li">
+                                        <a href="/pages/shipping-policy" class="ft-sublink">Shipping policy</a>
+                                    </li>
+
+                                    <li class="ftsublink-li">
+                                        <a href="/pages/terms-conditions" class="ft-sublink">Terms &amp; conditions</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+
+
+                            <li class="ftlink-li">
+                                <h2 class="ft-title d-none d-md-block">My account</h2>
+                                <a data-bs-toggle="collapse" href="#collapse-my-account"
+                                    class="ft-title e d-flex justify-content-between align-items-center d-md-none">
+                                    <span>My account</span>
+                                    <i class="fa fa-angle-down"></i>
+                                </a>
+                                <ul class="footer-sublist collapse d-md-block list-unstyled" id="collapse-my-account"
+                                    data-bs-parent="#ft-parent">
+
+
+
+                                    <li class="ftsublink-li">
+                                        <a href="/account" class="ft-sublink">My account</a>
+                                    </li>
+
+
+
+                                    <li class="ftsublink-li">
+                                        <a href="/cart" class="ft-sublink">My cart</a>
+                                    </li>
+
+
+
+                                    <li class="ftsublink-li">
+                                        <a href="/account" class="ft-sublink">Order history</a>
+                                    </li>
+
+
+
+                                    <li class="ftsublink-li">
+                                        <a href="/pages/wishlist" class="ft-sublink">My wishlist</a>
+                                    </li>
+
+
+
+                                    <li class="ftsublink-li">
+                                        <a href="/account/addresses" class="ft-sublink">My address</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="ftlink-li">
+                                <address>
+                                    <div class="address-contact">
+                                        <h6>Location</h6>
+                                        <div class="address-icon">
+                                            <span>38 block street arean licard hamonia road sydney, australia</span>
+                                        </div>
+                                        <div class="contact-icon">
+                                            <div>
+                                                <a href="tel:+014-33333-8888-6868">+014-33333-8888-6868</a>
+                                                <a href="mailto:support@spacingtech.com">support@spacingtech.com</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </address>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--footer end-->
+    <!--mobile filter start here-->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="filterCanvas" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Categories</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="">
+                <div class="shop-sidebar">
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+
+                        <div class="accordion-body overflow-auto" style="max-height:270px;">
+
+                            <ul class="collection-listing list-unstyled space-free">
+
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="checkbox1">
+                                        <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                                            Fashion
+                                            <span>(10)</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="checkbox1">
+                                        <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                                            Fashion
+                                            <span>(10)</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="checkbox1">
+                                        <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                                            Fashion
+                                            <span>(10)</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="checkbox1">
+                                        <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                                            Fashion
+                                            <span>(10)</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="checkbox1">
+                                        <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                                            Fashion
+                                            <span>(10)</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="checkbox1">
+                                        <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                                            Fashion
+                                            <span>(10)</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="checkbox1">
+                                        <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                                            Fashion
+                                            <span>(10)</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="checkbox1">
+                                        <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                                            Fashion
+                                            <span>(10)</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="checkbox1">
+                                        <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                                            Fashion
+                                            <span>(10)</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <!-- aur items -->
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="price-range shop-sidebar">
+                    <form class="row g-3 needs-validation" novalidate="">
+                        <label for="amount">Price range:</label>
+                        <input type="text" id="amount" readonly="" style="border:0; color:#f6931f; font-weight:bold;"
+                            class="form-control w-75">
+                    </form>
+                    <div id="slider-range"
+                        class="my-3 ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+                        <div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 15%; width: 45%;">
+                        </div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
+                            style="left: 15%;"></span><span tabindex="0"
+                            class="ui-slider-handle ui-corner-all ui-state-default" style="left: 60%;"></span>
+                        <div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 15%; width: 45%;">
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-sidebar">
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+
+                        <div class="accordion-body overflow-auto" style="max-height:270px;">
+
+                            <ul class="collection-listing list-unstyled space-free">
+
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="checkbox1">
+                                        <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                                            Fashion
+                                            <span>(10)</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="checkbox1">
+                                        <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                                            Fashion
+                                            <span>(10)</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="checkbox1">
+                                        <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                                            Fashion
+                                            <span>(10)</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="checkbox1">
+                                        <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                                            Fashion
+                                            <span>(10)</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="checkbox1">
+                                        <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                                            Fashion
+                                            <span>(10)</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="checkbox1">
+                                        <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                                            Fashion
+                                            <span>(10)</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="checkbox1">
+                                        <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                                            Fashion
+                                            <span>(10)</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="checkbox1">
+                                        <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                                            Fashion
+                                            <span>(10)</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="checkbox1">
+                                        <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                                            Fashion
+                                            <span>(10)</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <!-- aur items -->
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="shop-sidebar">
+                    <div class="accordion-body overflow-auto">
+
+                        <ul class="collection-listing list-unstyled space-free">
+
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="checkbox1">
+                                    <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                                        Fashion
+                                        <span>(10)</span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="checkbox1">
+                                    <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                                        Fashion
+                                        <span>(10)</span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="checkbox1">
+                                    <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                                        Fashion
+                                        <span>(10)</span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="checkbox1">
+                                    <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                                        Fashion
+                                        <span>(10)</span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="checkbox1">
+                                    <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                                        Fashion
+                                        <span>(10)</span>
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="shop-sidebar">
+                    <h6 class="title">Brand</h6>
+                    <ul class="scrollbar d-flex justify-content-between list-unstyled">
+                        <li class="brand">
+                            1 Selected
+                        </li>
+                        <li class="brand">
+                            <a href="#">Reset</a>
+                        </li>
+                    </ul>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="checkbox1">
+                        <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                            Fashion
+                            <span>(10)</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="shop-sidebar">
+                    <h6 class="title">Product Type</h6>
+                    <ul class="scrollbar d-flex justify-content-between list-unstyled">
+                        <li class="brand">
+                            0 Selected
+                        </li>
+                        <li class="brand">
+                            <a href="#">Reset</a>
+                        </li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="checkbox1">
+                                <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                                    Fashion
+                                    <span>(10)</span>
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="checkbox1">
+                                <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                                    Fashion
+                                    <span>(10)</span>
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class=" last-img">
+                    <h6 class="title">Availability</h6>
+                    <ul class="scrollbar d-flex justify-content-between list-unstyled">
+                        <li class="brand">
+                            0 Selected
+                        </li>
+                        <li class="brand">
+                            <a href="#">Reset</a>
+                        </li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="checkbox1">
+                                <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                                    Fashion
+                                    <span>(10)</span>
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="checkbox1">
+                                <label class="form-check-label d-flex justify-content-between" for="checkbox1">
+                                    Fashion
+                                    <span>(10)</span>
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="image/side-banner.webp" alt="" class="img-fluid">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--mobile filter end here-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
